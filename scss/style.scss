@@ -1,0 +1,423 @@
+$main-color: #24292e;
+
+
+
+
+.entry-title{
+    text-align: center;
+}
+
+.entry .entry-content, .entry .entry-summary {
+    margin: auto;
+    padding: auto;
+}
+
+
+
+/****** header部分 ************/
+#masthead{
+    height: 270px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+
+
+    .site-branding{
+        margin: 0;
+    }
+
+    .site-title{
+        display: block;
+        width: 120px;
+        height: 36px;
+    }
+
+
+
+    .Main-navigation{
+        display: flex;
+        text-align: right;
+
+
+        ul {
+    
+            li{
+                list-style: none;
+
+            
+                a{
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $main-color;
+                    font-family: 'Arial','Calibri','Consolas','Ebrima','Gadugi',sans-serif;
+                    font-weight: 400;
+                    padding-right: 0;
+                    letter-spacing: 0.15em;
+                    
+
+                    &:hover{
+                        color: #C0C0C0;
+                    }
+
+                    img{
+                        width: 20px;
+                        height: auto;
+                    }
+                }
+            }
+
+        }
+
+
+        
+
+        @media only screen and (max-width: 800px){
+
+            ul li a{
+                font-size: 14.4px;
+            }
+        }
+
+    }
+
+    
+
+
+    @media only screen and (max-width: 450px){
+        flex-direction: column;
+        height: auto;
+        display: block;
+        align-items: center;
+        padding-top: 30px;
+
+        // #Site-navigation{
+        //     display: inline !important;
+        //     max-width: 100% !important;
+        //     text-align: center;
+
+            
+            // div{
+            //     max-width: 100% !important;
+                
+                ul li {
+                    font-size: 12.8px !important;
+
+                    &:nth-child(5) a img{
+                        font-size: 20px;
+                    }
+                }
+
+                
+            // }
+        // }
+    }
+
+    
+}
+
+#mainvisual{
+    margin-bottom: 80px;
+
+    img{
+        height: 420px;
+        object-fit: cover;
+
+        @media only screen and (max-width: 450px){
+            width: 100%;
+            
+        }
+    }
+
+
+}
+
+
+/****** トップページのcontent部分 ************/
+.content-eria{
+    display: flex;
+    justify-content: center;
+
+
+    
+}
+
+.site-main{
+    align-items: center;
+    
+    .s-wrapper{
+        margin: 30px auto 130px auto;
+        max-width: 960px;
+        font-size: 0.9rem;
+        padding: 0 4%;
+
+        
+    }
+
+
+    .sec-title{
+        margin-bottom: 64px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .sec-title::before{
+        display: none;
+    }
+
+    ul li{
+        list-style: none;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    p{
+        margin-bottom: 0;
+    }
+
+    p, li{
+        font-size: 14.4px;
+        font-weight: 400;
+    }
+
+    #works{
+
+        @media only screen and (max-width: 450px){
+            figure .wp-block-image:not(#individual-image){
+                width: 100%;
+                margin: 15px auto;
+
+            }
+
+            figure .wp-block-image{
+                margin-bottom: auto;
+            }
+
+        }
+    }
+
+    #news{
+
+        // テーブルタグにして横並びにする
+        dl {
+            display: table;
+            width: 878px;
+        }
+
+        // 同じくテーブルタグにして横並びにする
+        dl dt, dl dd {
+            display: table-cell;
+        }
+
+
+        dl dt{
+            font-size: 14.4px;
+            padding: 0 15px 15px;
+            width: 20%;
+            border-bottom: solid 1px #c8c8c8;
+        }
+
+        dl dd{
+            font-size: 14.4px;
+            padding: 0 15px 15px;
+            width: 80%;
+            border-bottom: solid 1px #c8c8c8;
+        }
+
+        dd.post-title{
+            box-sizing: inherit;
+        }
+
+        @media only screen and (max-width: 800px){
+
+            dl{
+                width: 720px;
+            }
+        }
+
+        @media only screen and (max-width: 450px){
+
+            dl{
+                display: flex;
+                flex-direction: column;
+                width: 362px;
+            }
+
+            dl dt{
+                width: 98%;
+                font-weight: 400;
+                border-bottom: none;
+            }
+
+            dl dd{
+                width: 98%;
+                margin-right: 0;
+            }
+        }
+    
+    }
+
+    
+
+    #contact{
+
+
+        // テーブルタグにして横並びにする
+        dl {
+            display: table;
+            width: 878px;
+        }
+
+        // 同じくテーブルタグにして横並びにする
+        dl dt, dl dd {
+            display: table-cell;
+        }
+
+        .btn-submit{
+            text-align: center;
+
+            span{
+                display: none;
+            }
+        }
+
+        // submitボタンのサイズ
+        input[type="submit"]{
+            width: 200px;
+            border-radius: 0;
+            font-weight: 400;
+            background-color: $main-color;
+        }
+
+
+
+        @media only screen and (max-width: 800px){
+
+            dl{
+                display: block;
+            }
+
+            dl dt, dl dd {
+                font-size: 14.4px;
+                font-weight: 400;
+            }
+
+            dl dt{
+                width: 105px;
+            }
+
+            dl dd{
+                width: 600px;
+
+                input{
+                    width: 100%;
+                }
+            }
+
+
+        }
+
+
+        @media only screen and (max-width: 450px){
+
+
+            dl dd{
+                width: 400px;
+                display: block !important;
+
+                input,
+                textarea{
+                    width: 90%;
+                }
+            }
+
+            dl dt label{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    
+
+    
+    
+
+    @media only screen and (min-width: 1168px){
+        .entry .entry-content > *, .entry .entry-summary > *, 
+        .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *, 
+        .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * 
+        {
+            max-width: 1100px; 
+        }
+    
+    }
+
+    
+    
+    
+    @media print,screen and (min-width: 878px) {
+
+        .wpcf7{
+            display: flex;
+            justify-content: center;
+            width: 878px;
+
+
+            dl dd{
+                width: 746px;
+            }
+
+            dl dt label{
+                width: 131px;
+                font-weight: 400;
+                font-size: 14.4px;
+                vertical-align: top;
+            }
+    
+            textarea{
+                height: 160px;
+            }
+
+            input[name="your-name"] { /* 名前入力欄 */
+                width: 100%;
+            }
+            input[name="your-email"] { /* メール入力欄 */
+                width: 100%;
+            }
+
+            textarea[name="your-message"] { /* 本文入力欄 */
+                width: 100%;
+            }
+ 
+            
+        }
+    
+    }
+
+}
+
+footer{
+    display: block;
+    background: $main-color;
+    text-align: center;
+    padding: 10px auto;
+
+    .site-info{
+        background-color: $main-color;
+        height: auto;
+
+        p{
+            color:#ffffff;
+            font-size: 0.5rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
